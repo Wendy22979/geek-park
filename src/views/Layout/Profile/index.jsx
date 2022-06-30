@@ -17,7 +17,7 @@ import {
   PhoneFill
 } from 'antd-mobile-icons'
 
-import { Button } from 'antd-mobile'
+import { Button, Modal } from 'antd-mobile'
 
 
 const Profile = () => {
@@ -30,12 +30,21 @@ const Profile = () => {
   }, [dispatch])
 
   const logout = () => {
-    // 跳转到登录页面
-    navigator("/login")
-    // 删除token信息
-    removeToken()
-    // 提示
-    Toast.show('已退出登录')
+    Modal.confirm({
+      content: '是否退出登录？',
+      onConfirm: () => {
+        // 跳转到登录页面
+        navigator("/login")
+        // 删除token信息
+        removeToken()
+        // 提示
+        Toast.show('已退出登录')
+      },
+      onCancel: () => {
+        Toast.show('已取消')
+      }
+    })
+
   }
   return (
     <div className={styles.root}>

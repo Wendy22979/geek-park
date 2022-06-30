@@ -30,20 +30,6 @@ export default function Home () {
         active={active}  //当前tab的下标
         onChange={changeActive} //点击事件
       >
-
-        {/* 内容区域
-        {
-          tabs.map((item) => {
-            return (
-              <ArticleList
-                key={item.id}
-                active={active}  //当前tab的下标
-                channelId={item.id}
-              />
-            )
-          }) */}
-        {/* } */}
-
       </Tabs>
 
       {/* 频道 Tab 栏右侧的两个图标按钮：搜索、频道管理 */}

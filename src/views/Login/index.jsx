@@ -132,7 +132,7 @@ export default function Login () {
   return (
     <div>
       {/* 顶部导航 */}
-      <NavBar title="我是标题" extra={<span >更多</span>} />
+      <NavBar title="登录" extra={<span >更多</span>} />
 
       {/* 内容 */}
       <div className="content">
@@ -156,7 +156,7 @@ export default function Login () {
               <Input
                 type="text"
                 name="code"
-                extra={time === 0 ? '发送验证码' : time + 's后发送'}
+                extra={time === 0 ? '获取验证码' : time + 's后发送'}
                 value={form.values.code}
                 onChange={form.handleChange}
                 maxLength={6}
