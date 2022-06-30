@@ -1,0 +1,34 @@
+.root{
+  display:flex;
+  justify-content: space-around;
+  padding-top:10px;
+  padding-bottom: 10px;
+  border-bottom:1px solid #ccc;
+  margin: 0 15px;
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h3 {
+      padding-bottom:10px;
+      font-weight: 400;
+      font-size: 16px;
+      color:rgb(26, 3, 3);
+      line-height: 1.5em;
+
+    }
+    flex-wrap:wrap;
+    .left_bottom {
+      color:#666;
+      font-size: 14px;
+    }
+  }
+  .right {
+    margin-left:10px;
+    img {
+      border-radius: 4px;
+      width: 100px;
+      height: 60px;
+    }
+  }
+}
